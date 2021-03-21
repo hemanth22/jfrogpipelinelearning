@@ -43,9 +43,6 @@ pipelines:
               trigger: false
           outputResources:
             - name: DockerAppImage
-          inputSteps:
-            - name: bld_backend
-            - name: publish_frontend #bld_frontend
         execution:
           onStart:
             - sed -i "s/docker.artifactory/docker.${ArtIP}/" $res_myGitRepo_resourcePath/Dockerfile
