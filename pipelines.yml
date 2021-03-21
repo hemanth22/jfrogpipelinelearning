@@ -60,5 +60,7 @@ pipelines:
           autoPublishBuildInfo: true
           integrations:
             - name: JFROG
+          inputSteps:
+            - name: bld_docker_app
           outputResources:
             - name: myBuildInfo
